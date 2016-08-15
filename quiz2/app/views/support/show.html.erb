@@ -1,0 +1,15 @@
+<h1>Name: <%= @support.name %></h1>
+<p>
+  Email: <%= @support.email %>
+</p>
+<p>
+  Department: <%= @support.department %>
+</p>
+<p>
+  Message: <%= @support.message %>
+</p>
+
+<%= link_to "Edit", edit_support_path(@support) %>
+<%= link_to "Delete", support_path(@support),
+                      method: :delete,
+                      data: {confirm: "Are you sure?"} %>
